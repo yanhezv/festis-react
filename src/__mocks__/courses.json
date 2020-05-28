@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "HTML desde cero",
+    "slug": "html-desde-cero",
+    "description": "Curso resumido para conocer el lenguaje de marcado empleado por nuestros navegadores.",
+    "status": "1"
+  },
+  {
+    "id": 2,
+    "name": "Git",
+    "slug": "git",
+    "description": "Es un software de control de versiones.",
+    "status": "1"
+  },
+  {
+    "id": 3,
+    "name": "Diseño gráfico",
+    "slug": "diseno-grafico",
+    "description": "Aprende con nosotros herramientas que te facilitarán expresar tu ideas gráficas.",
+    "status": "1"
+  }
+]

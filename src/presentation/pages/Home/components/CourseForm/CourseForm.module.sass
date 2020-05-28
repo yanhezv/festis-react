@@ -1,0 +1,55 @@
+@import "../../../../../theme/variables/_theme"
+
+.CourseForm
+   background: $primary
+   margin-bottom: 20px
+   padding: 20px
+
+.CourseForm .Input
+   display: flex
+   flex-direction: column
+   margin-bottom: 10px
+
+.CourseForm .Input label
+   color: white
+   margin-bottom: 10px
+
+.CourseForm .Input input,
+.CourseForm .Input textarea
+   color: $text-dark
+   font-size: 18px
+   font-family: inherit
+   padding: 5px 10px
+   min-height: 40px
+   border: none
+   margin-bottom: 10px
+
+.CourseForm .Input input:focus,
+.CourseForm .Input textarea:focus
+   outline: 1px solid $primary-light
+   outline-offset: 1px
+
+.CourseForm .Input textarea
+   min-height: 90px
+
+.CourseForm .Actions
+   display: flex
+
+.CourseForm .Actions button
+   display: flex
+   align-items: center
+   justify-content: center
+   padding: 5px 10px
+   background: $secondary
+   border: none
+   height: 40px
+   color: white
+   font-size: 18px
+   text-transform: uppercase
+   font-family: inherit
+   cursor: pointer
+   transition: all ease-out .3s
+
+.CourseForm .Actions button:hover
+   background: #ff6b23
+

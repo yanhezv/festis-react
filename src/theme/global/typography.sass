@@ -1,0 +1,136 @@
+body
+   min-width: 100px
+   min-height: 100%
+   font-family: $font-primary
+   -ms-text-size-adjust: 100%
+   -webkit-text-size-adjust: 100%
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   font-smoothing: antialiased
+   line-height: $line-height
+   font-size: $font-size
+   color: $text-dark
+
+p
+   margin: 0
+
+$xsTitle: (h1: 24px, h2: 22px, h3: 20px, h4: 18px)
+$smTitle: (h1: 26px, h2: 23px, h3: 21px, h4: 19px)
+$mdTitle: (h1: 28px, h2: 24px, h3: 22px, h4: 20px)
+$lgTitle: (h1: 30px, h2: 25px, h3: 23px, h4: 21px)
+$xlTitle: (h1: 32px, h2: 26px, h3: 24px, h4: 22px)
+
+$xsText: (text-1: 16px, text-2: 14px, text-3: 12px, text-4: 10px)
+$smText: (text-1: 16px, text-2: 14px, text-3: 12px, text-4: 10px)
+$mdText: (text-1: 16px, text-2: 14px, text-3: 12px, text-4: 10px)
+$lgText: (text-1: 18px, text-2: 16px, text-3: 14px, text-4: 12px)
+$xlText: (text-1: 18px, text-2: 16px, text-3: 14px, text-4: 12px)
+
+@mixin mixinTitle($heading, $size)
+   @each $selector in $heading
+      .e-#{$selector}
+         font-weight: 500
+         font-size: $size
+         line-height: 1.5
+
+@mixin mixinText($texts, $size)
+   @each $selector in $texts
+      .e-#{$selector}
+         font-size: $size
+         line-height: 1.3
+
+@each $name, $size in $xsTitle
+   @include mixinTitle(#{$name}, $size)
+
+@each $name, $size in $xsText
+   @include mixinText(#{$name}, $size)
+
+@media screen and (min-width: $breakpoint-sm)
+   @each $name, $size in $smTitle
+      @include mixinTitle(#{$name}, $size)
+
+   @each $name, $size in $smTitle
+      @include mixinTitle(#{$name}\:sm, $size)
+
+   @each $name, $size in $smText
+      @include mixinText(#{$name}, $size)
+
+   @each $name, $size in $smText
+      @include mixinText(#{$name}\:sm, $size)
+
+@media screen and (min-width: $breakpoint-md)
+   @each $name, $size in $mdTitle
+      @include mixinTitle(#{$name} #{$name}\:sm, $size)
+
+   @each $name, $size in $mdTitle
+      @include mixinTitle(#{$name}\:md, $size)
+
+   @each $name, $size in $mdText
+      @include mixinText(#{$name} #{$name}\:sm, $size)
+
+   @each $name, $size in $mdText
+      @include mixinText(#{$name}\:md, $size)
+
+@media screen and (min-width: $breakpoint-lg)
+   @each $name, $size in $lgTitle
+      @include mixinTitle(#{$name} #{$name}\:sm #{$name}\:md, $size)
+
+   @each $name, $size in $lgTitle
+      @include mixinTitle(#{$name}\:lg, $size)
+
+   @each $name, $size in $lgText
+      @include mixinText(#{$name} #{$name}\:sm #{$name}\:md, $size)
+
+   @each $name, $size in $lgText
+      @include mixinText(#{$name}\:lg, $size)
+
+@media screen and (min-width: $breakpoint-xl)
+   @each $name, $size in $xlTitle
+      @include mixinTitle(#{$name} #{$name}\:sm #{$name}\:md #{$name}\:lg, $size)
+
+   @each $name, $size in $xlTitle
+      @include mixinTitle(#{$name}\:xl, $size)
+
+   @each $name, $size in $xlText
+      @include mixinText(#{$name} #{$name}\:sm #{$name}\:md #{$name}\:lg, $size)
+
+   @each $name, $size in $xlText
+      @include mixinText(#{$name}\:xl, $size)
+
+
+.e-text-
+   &uppercase
+      text-transform: uppercase
+   &lowercase
+      text-transform: lowercase
+   &capitalize
+      text-transform: capitalize
+   &reset
+      text-transform: none
+      font-size: inherit
+      font-weight: normal
+
+   &center
+      text-align: center
+   &left
+      text-align: left
+   &right
+      text-align: right
+   &justify
+      text-align: justify
+      hyphens: auto
+
+   &bold
+      font-weight: bold
+   &medium
+      font-weight: 500
+   &normal
+      font-weight: normal
+   &light
+      font-weight: 300
+
+   &no-wrap
+      white-space: nowrap
+
+   &strike
+      text-decoration: line-through

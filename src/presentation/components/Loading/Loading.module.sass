@@ -1,0 +1,63 @@
+@import "../../../theme/variables/_theme"
+
+$loader-width        : 100px
+$loader-height       : 100px
+$line-width          : 4px
+$line-height         : 4px
+$loader-color-primary: $accent
+$animation-duration  : 1s
+
+.Loading
+   background-image: url("/assets/FondoFestIS.jpg")
+   background-position: center
+   background-size: cover
+   height: 100vh
+
+   display: flex
+   justify-content: center
+   align-items: center
+
+   color: white
+   min-height: 100vh
+
+
+@keyframes blast-ripple
+   0%
+      top: ($loader-height / 2) - $line-width
+      left: ($loader-width / 2) - $line-width
+      width: 0
+      height: 0
+      opacity: 1
+
+   100%
+      top: -1px
+      left: -1px
+      width: $loader-width - $line-width
+      height: $loader-height - $line-width
+      opacity: 0
+
+.Loader
+   position: relative
+   width: $loader-width
+   height: $loader-height
+
+   &::after
+      opacity: 0
+      content: ""
+      position: absolute
+      border: $line-width solid $loader-color-primary
+      opacity: 1
+      border-radius: 50%
+      animation: blast-ripple $animation-duration cubic-bezier(0, 0.2, 0.8, 1) infinite
+
+   &::before
+      opacity: 0
+      top: ($loader-height / 2) - $line-width
+      left: ($loader-width / 2) - $line-width
+      content: ""
+      position: absolute
+      border: $line-width solid $loader-color-primary
+      opacity: 1
+      border-radius: 50%
+      animation: blast-ripple $animation-duration cubic-bezier(0, 0.2, 0.8, 1) infinite
+      animation-delay: $animation-duration / 2

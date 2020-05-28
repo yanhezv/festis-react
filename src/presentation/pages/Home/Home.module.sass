@@ -1,0 +1,55 @@
+@import "../../../theme/variables/_theme"
+
+.Courses
+   min-height: calc(100vh - 60px)
+   padding: 60px 10px
+   color: #4d4d4d
+   font-size: 18px
+
+@media only screen and (min-width: 768px)
+   .Courses
+      display: flex
+
+   .CourseForm
+      width: 400px
+
+   .CourseList
+      width: calc(100% - 360px)
+      margin-left: 40px
+      position: relative
+
+   .CourseList::before
+      content: ""
+      display: block
+      height: 100%
+      width: 0
+      border-left: 2px dashed #bdccd4
+      position: absolute
+      left: -21px
+      top: 0
+
+.Items
+   display: flex
+   flex-wrap: wrap
+
+.Item
+   width: 100%
+
+@media only screen and (min-width: 520px) and (max-width: 767px)
+   .Item
+      margin: 0 20px 20px 0
+      width: calc(50% - 10px)
+
+   .Item:nth-child(2n)
+      margin-right: 0
+
+
+@media only screen and (min-width: 960px)
+   .Item
+      margin: 0 20px 20px 0
+      width: calc(50% - 10px)
+
+   .Item:nth-child(2n)
+      margin-right: 0
+
+

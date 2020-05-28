@@ -1,0 +1,46 @@
+@import "../../../../../theme/variables/_theme"
+
+.CourseCard
+   width: 100%
+   margin-bottom: 15px
+
+   header
+      background: $primary
+      display: flex
+      align-items: center
+      color: $text-primary
+
+.Title
+   font-size: 18px
+   padding: 5px 5px 5px 15px
+   width: calc(100% - 80px)
+
+   span::after
+      content: "."
+
+   h1
+      display: inline
+      font-weight: normal
+      font-size: 18px
+
+.Options
+   display: flex
+   font-size: 0
+   width: 80px
+
+   button
+      background-color: transparent
+      border: none
+      cursor: pointer
+      color: inherit
+      width: 40px
+      height: 40px
+      outline: none
+      &:hover
+         background: rgba(0,0,0,0.1)
+
+.Description
+   background: $primary-soft
+   padding: 10px 15px
+   min-height: 120px
+

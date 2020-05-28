@@ -1,0 +1,56 @@
+$space-base   : 16px
+$space-x-base : $space-base
+$space-y-base : $space-base
+
+$space-none : (x: 0, y: 0)        // (x: 0, y: 0)
+$space-xs   : (x: 4px, y: 4px)    // (x: ($space-x-base * .25), y: ($space-y-base * .25))
+$space-sm   : (x: 8px, y: 8px)    // (x: ($space-x-base * .5), y: ($space-y-base * .5))
+$space-md   : (x: 12px, y: 12px)  // (x: $space-x-base, y: $space-y-base)
+$space-lg   : (x: 16px, y: 16px)  // (x: ($space-x-base * 1.5), y: ($space-y-base * 1.5))
+$space-xl   : (x: 20px, y: 20px)  // (x: ($space-x-base * 3), y: ($space-y-base * 3))
+
+$spaces: ('none': $space-none, 'xs': $space-xs, 'sm': $space-sm, 'md': $space-md, 'lg': $space-lg, 'xl': $space-xl)
+
+@each $space, $value in $spaces
+   .e-pa-#{$space}
+      padding: map-get($value, "y") map-get($value, "x")
+   .e-pl-#{$space}
+      padding-left: map-get($value, "x")
+   .e-pr-#{$space}
+      padding-right: map-get($value, "x")
+   .e-pt-#{$space}
+      padding-top: map-get($value, "y")
+   .e-pb-#{$space}
+      padding-bottom: map-get($value, "y")
+   .e-px-#{$space}
+      padding-left: map-get($value, "x")
+      padding-right: map-get($value, "x")
+   .e-py-#{$space}
+      padding-top: map-get($value, "y")
+      padding-bottom: map-get($value, "y")
+
+   .e-ma-#{$space}
+      margin: map-get($value, "y") map-get($value, "x")
+   .e-ml-#{$space}
+      margin-left: map-get($value, "x")
+   .e-mr-#{$space}
+      margin-right: map-get($value, "x")
+   .e-mt-#{$space}
+      margin-top: map-get($value, "y")
+   .e-mb-#{$space}
+      margin-bottom: map-get($value, "y")
+   .e-mx-#{$space}
+      margin-left: map-get($value, "x")
+      margin-right: map-get($value, "x")
+   .e-my-#{$space}
+      margin-top: map-get($value, "y")
+      margin-bottom: map-get($value, "y")
+
+.e-mt-auto, .e-my-auto
+   margin-top: auto
+.e-ml-auto, .e-mx-auto
+   margin-left: auto
+.e-mb-auto, .e-my-auto
+   margin-bottom: auto
+.e-mr-auto, .e-mx-auto
+   margin-right: auto

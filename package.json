@@ -1,0 +1,33 @@
+{
+  "name": "festis-react",
+  "version": "1.0.0",
+  "description": "FestIS React App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanhezv/festis-react.git"
+  },
+  "author": "Omar Villanueva Sotelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yanhezv/festis-react/issues"
+  },
+  "homepage": "https://github.com/yanhezv/festis-react#readme",
+  "dependencies": {
+    "next": "^9.4.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "@types/react": "^16.9.35",
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "sass": "^1.26.5",
+    "typescript": "^3.9.3"
+  }
+}
