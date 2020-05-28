@@ -1,8 +1,9 @@
 # FestIS
 
-Usted puede probar el proyecto final en:
+Usted puede visualizar el proyecto final en:
 
-[https://yanhezv.github.io/taller-desarrollo-web](https://yanhezv.github.io/taller-desarrollo-web/index.html)
+[https://festis-react.yanhezv.now.sh/](https://festis-react.yanhezv.now.sh/)
+
 
 ## Getting Started
 
@@ -25,9 +26,7 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.ts`. The page auto-updates as you edit the file.
+Abre [http://localhost:3000](http://localhost:3000) con tu navegador para ver el resultado.
 
 
 Para levantar el servidor de NextJS en modo producción ejecute:

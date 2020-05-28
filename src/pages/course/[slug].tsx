@@ -9,6 +9,8 @@ import { Loading } from "@components/Loading";
 import { NotFound } from "@components/NotFound";
 import { CourseDetail } from "@pages/CourseDetail";
 
+import courses from "../../__mocks__/courses.json";
+
 interface CoursePageProps {
    course: Course | null;
 }
@@ -48,14 +50,16 @@ const CoursePage: React.FC<CoursePageProps> = ({ course }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
    return {
-      paths: [],
-      fallback: true
+      paths: courses.map((course) =>({
+         params: { slug: course.slug }
+      })),
+      fallback: false
    }
 }
 
 export const getStaticProps: GetStaticProps<CoursePageProps> = async ({ params = {slug: ''} }) => {
-   const result     = await fetch(`http://localhost:3000/api/courses/${params.slug}`);
-   const { course } = await result.json() as {course: Course | null};
+   const slug = params.slug.toString();
+   const course = courses.find((course: Course) => course.slug === slug)
 
    return {
       props: { course }
