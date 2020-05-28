@@ -1,6 +1,6 @@
 # FestIS
 
-Usted puede visualizar el proyecto final en:
+Proyecto realizado con el Framework [Next JS](https://nextjs.org/) empleando React JS. Para visualizar el proyecto desplegado ingrese a:
 
 [https://festis-react.yanhezv.now.sh/](https://festis-react.yanhezv.now.sh/)
 
